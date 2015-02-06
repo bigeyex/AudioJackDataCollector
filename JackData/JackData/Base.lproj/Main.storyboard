@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GfK-9l-RcN" customClass="EZAudioPlot">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="140"/>
+                                <color key="backgroundColor" red="1" green="0.57171016820933784" blue="0.7352944457115338" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueW-ao-wy6">
+                                <rect key="frame" x="343" y="148" width="241" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o86-eg-UE4">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Calibrate" id="Hf3-qT-bJx"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="a2o-FC-GRZ"/>
+                                    <barButtonItem title="About" id="GjY-bL-5Ds"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="F53-46-fFe"/>
+                                    <barButtonItem title="Calibrate" id="iJc-tJ-QJG"/>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPe-2C-wLO">
+                                <rect key="frame" x="343" y="186" width="241" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aux-Ly-HDg">
+                                <rect key="frame" x="0.0" y="264" width="600" height="292"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="305-Ao-ScD">
+                                        <rect key="frame" x="250" y="57" width="100" height="100"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Sample">
+                                            <color key="titleShadowColor" red="0.25098040699958801" green="0.50196081399917603" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="takeASamplePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sp6-cn-8ST"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6cN-nf-dNq">
+                                        <rect key="frame" x="8" y="254" width="97" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JmD-qS-bG7">
+                                        <rect key="frame" x="495" y="254" width="97" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="6cN-nf-dNq" firstAttribute="leading" secondItem="Aux-Ly-HDg" secondAttribute="leading" constant="8" id="R3k-5c-TAA"/>
+                                    <constraint firstAttribute="bottom" secondItem="JmD-qS-bG7" secondAttribute="bottom" constant="8" id="kBc-jD-bHR"/>
+                                    <constraint firstAttribute="bottom" secondItem="6cN-nf-dNq" secondAttribute="bottom" constant="8" id="oN0-V1-8s6"/>
+                                    <constraint firstAttribute="centerX" secondItem="305-Ao-ScD" secondAttribute="centerX" id="p65-SC-cMa"/>
+                                    <constraint firstAttribute="trailing" secondItem="JmD-qS-bG7" secondAttribute="trailing" constant="8" id="vN8-Bx-fqV"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="with 95% confidence level" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKI-d8-11M">
+                                <rect key="frame" x="392" y="240" width="208" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.54001322751322745" green="0.54001322751322745" blue="0.54001322751322745" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Aux-Ly-HDg" secondAttribute="trailing" constant="-16" id="0Tl-a8-f85"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rKI-d8-11M" secondAttribute="trailing" constant="10" id="0z5-lM-Zd3"/>
+                            <constraint firstItem="ueW-ao-wy6" firstAttribute="top" secondItem="GfK-9l-RcN" secondAttribute="bottom" constant="8" id="42w-sh-sXo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rKI-d8-11M" secondAttribute="trailing" id="BAa-ap-sMx"/>
+                            <constraint firstItem="Aux-Ly-HDg" firstAttribute="top" secondItem="rKI-d8-11M" secondAttribute="bottom" constant="3" id="CEo-sO-SPd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="o86-eg-UE4" secondAttribute="bottom" id="DH6-qc-0PB"/>
+                            <constraint firstItem="xPe-2C-wLO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="MZ7-aW-ZgN"/>
+                            <constraint firstAttribute="centerX" secondItem="o86-eg-UE4" secondAttribute="centerX" id="Mv5-lq-Pm4"/>
+                            <constraint firstItem="Aux-Ly-HDg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="OUj-co-MAh"/>
+                            <constraint firstItem="xPe-2C-wLO" firstAttribute="top" secondItem="ueW-ao-wy6" secondAttribute="bottom" id="OZL-RO-Fmv"/>
+                            <constraint firstItem="o86-eg-UE4" firstAttribute="top" secondItem="Aux-Ly-HDg" secondAttribute="bottom" id="Sg2-jo-0xk"/>
+                            <constraint firstItem="ueW-ao-wy6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Yh2-9F-LEk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="o86-eg-UE4" secondAttribute="trailing" id="foV-nH-kMY"/>
+                            <constraint firstItem="o86-eg-UE4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="g8w-Ey-3PP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="o86-eg-UE4" secondAttribute="trailing" constant="-16" id="kM5-wm-wVc"/>
+                            <constraint firstItem="o86-eg-UE4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lwN-Y4-YCV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="audioPlotFreq" destination="GfK-9l-RcN" id="6de-5R-inT"/>
+                        <outlet property="currentReading" destination="ueW-ao-wy6" id="pd7-Ln-TKk"/>
+                        <outlet property="sampleStatus" destination="xPe-2C-wLO" id="1QB-qm-0Qq"/>
+                        <outlet property="takeASampleButton" destination="305-Ao-ScD" id="NRh-82-cDV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="522" y="333"/>
+        </scene>
+    </scenes>
+</document>
